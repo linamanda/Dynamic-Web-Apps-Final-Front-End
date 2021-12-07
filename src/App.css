@@ -1,38 +1,83 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c9e8ff;
+}
+
+/* Header.js styles */
+
+.Header {
+  align-items: center;
+  background-color: #03375e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.Header .Logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Header nav {
+  display: flex;
+}
+
+.Header nav a {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+
+.Header nav a:hover {
+  border-bottom: white solid 2px;
+}
+
+.Header nav a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Landing.js styles */
+.LandingContent {
+  display: grid;
+  grid-template-areas:
+    "title title title title title title"
+    ". description description prompt . ."
+    ". description description link . .";
+  margin: 0 10%;
+}
+
+.LandingContent h2 {
+  display: flex;
+  grid-area: title;
+  justify-content: center;
+  padding: 5% 0 15% 0;
+}
+
+.LandingDesc {
+  grid-area: description;
+  line-height: 2em;
+  margin-left: 10%;
+  max-width: 50%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.LandingPrompt {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-area: prompt;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.LandingContent a {
+  display: flex;
+  grid-area: link;
+  justify-content: center;
 }
