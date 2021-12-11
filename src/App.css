@@ -7,15 +7,21 @@ body {
   background-color: #c9e8ff;
 }
 
+.PageWrapper {
+  margin: 2% 5%;
+}
+
 /* Header.js styles */
+.HeaderWrapper {
+  background-color: #03375e;
+  padding: 5px 25px;
+}
 
 .Header {
   align-items: center;
-  background-color: #03375e;
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 20px 25px;
 }
 
 .Header .Logo {
@@ -30,6 +36,7 @@ body {
 .Header nav a {
   color: white;
   cursor: pointer;
+  border-bottom: #03375e solid 2px;
   font-size: 16px;
   margin: 0 10px;
   padding: 2px 10px;
@@ -40,22 +47,16 @@ body {
   border-bottom: white solid 2px;
 }
 
-.Header nav a:last-child {
-  margin-right: 0;
-  padding-right: 0;
-}
-
 /* Landing.js styles */
 .LandingContent {
   display: grid;
   grid-template-areas:
     "title title title title title title"
-    ". description description prompt . ."
-    ". description description link . .";
+    ". description description cto . .";
   margin: 0 10%;
 }
 
-.LandingContent h2 {
+.LandingContent h1 {
   display: flex;
   grid-area: title;
   justify-content: center;
@@ -70,14 +71,123 @@ body {
   text-align: center;
 }
 
-.LandingPrompt {
+.LandingCTO {
+  align-items: center;
   display: flex;
-  grid-area: prompt;
+  flex-direction: column;
+  grid-area: cto;
   justify-content: center;
 }
 
-.LandingContent a {
+.LandingCTO a {
+  background-color: #0ac432;
+  border: green solid 1px;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 0;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.LandingCTO a:hover {
+  background-color: green;
+}
+
+/* Form styles (LoginForm.js CreateUserForm.js) */
+.Form {
+  background-color: white;
+  border-radius: 20px;
+  margin: 5% 35%;
+  padding: 2% 0;
+}
+
+.Form h1 {
   display: flex;
-  grid-area: link;
   justify-content: center;
+  margin-bottom: 5%;
+}
+
+.Form form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15%;
+}
+
+.Form label {
+  padding: 5px 0;
+}
+
+.Form input {
+  border: black solid 1px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px 5px;
+}
+
+.Form button {
+  background-color: #0ac432;
+  border: green solid 1px;
+  border-radius: 5px;
+  color: white;
+  margin: 0 25%;
+  padding: 0.5em 0;
+}
+
+.Form button:hover {
+  cursor: pointer;
+}
+
+/* PostCard.js styles */
+.PostCard {
+  border: black solid 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-areas:
+    "pfp userInfo . . ."
+    "msg msg msg msg msg";
+  grid-template-columns: 65px repeat(4, 1fr);
+  margin: 1% 20%;
+  padding: 1% 2%;
+}
+
+.PostCardProfileImage {
+  grid-area: pfp;
+}
+
+.PostCardProfileImage img {
+  border-radius: 25px;
+  height: 50px;
+  object-fit: cover;
+  width: 50px;
+}
+
+.PostCardUserInfo {
+  grid-area: userInfo;
+}
+
+.PostCardUserInfo a {
+  color: black;
+  text-decoration: none;
+}
+
+.PostCardUserInfo a:hover {
+  text-decoration: underline;
+}
+
+.PostCardMessage {
+  grid-area: msg;
+}
+
+/* Profile.js styles */
+.ProfileUserInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  justify-content: center;
+}
+
+.ProfileUserPosts h2 {
+  margin: 2% 20%;
 }
