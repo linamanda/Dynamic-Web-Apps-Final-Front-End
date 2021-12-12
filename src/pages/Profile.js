@@ -5,7 +5,6 @@ import PostCard from "../components/PostCard";
 import { baseUrl } from "../App";
 
 function Profile({ userInformation }) {
-  console.log(userInformation);
   const [userPosts, setUserPosts] = useState();
   useEffect(() => {
     // Get all posts from API
@@ -31,7 +30,7 @@ function Profile({ userInformation }) {
         <h1>{userInformation.displayName}</h1>
       </div>
       <div className="ProfileUserPosts">
-        <h2>Posts</h2>
+        <h2 className="ProfilePosts">Posts</h2>
         {userPosts &&
           userPosts.map((post, i) => <PostCard post={post} key={i} />)}
       </div>

@@ -20,19 +20,31 @@ body {
 }
 
 .Header {
-  align-items: center;
   color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-.Header .Logo {
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .Header nav {
+  align-items: center;
   display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.Header nav > .Logo {
+  flex-basis: auto;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Header nav > .HeaderLeft,
+.Header nav > .HeaderRight {
+  flex-basis: 20%;
+}
+
+.Header nav > .HeaderRight {
+  text-align: right;
 }
 
 .Header nav a {
@@ -47,6 +59,13 @@ body {
 
 .Header nav a:hover {
   border-bottom: white solid 2px;
+}
+
+/* Home.js styles */
+.HomeNewsfeed {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 3em;
+  margin: 2% 20%;
 }
 
 /* Landing.js styles */
@@ -208,6 +227,12 @@ body {
   width: 200px;
 }
 
+.ProfilePosts {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 3em;
+  margin: 0 20% 2% 20%;
+}
+
 .ProfileUserPosts h2 {
   margin: 2% 20%;
 }
@@ -216,6 +241,14 @@ body {
 .SinglePost {
   margin-top: 10%;
   pointer-events: none;
+}
+
+.SinglePost > .PostCard:hover {
+  background-color: #b5caff;
+}
+
+.SinglePost > .PostCard > .PostCardUserInfo a {
+  pointer-events: all;
 }
 
 .SinglePost > .PostCard > .PostCardMessage {

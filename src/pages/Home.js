@@ -6,7 +6,6 @@ import AddPostForm from "../components/AddPostForm";
 import { baseUrl } from "../App";
 
 function Home({ userInformation }) {
-  console.log(userInformation);
   const [posts, setPosts] = useState();
   useEffect(() => {
     // Get all posts from API
@@ -24,8 +23,8 @@ function Home({ userInformation }) {
 
   return (
     <div className="PageWrapper">
-      <h1>Home</h1>
       <AddPostForm userInformation={userInformation} />
+      <h1 className="HomeNewsfeed">Newsfeed</h1>
       {posts && posts.map((post, i) => <PostCard post={post} key={i} />)}
     </div>
   );
