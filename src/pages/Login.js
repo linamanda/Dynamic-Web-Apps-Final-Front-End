@@ -19,7 +19,7 @@ function Login({ setLoggedIn, setUserInformation }) {
           setLoggedIn(true);
           setUserInformation({
             email: user.email,
-            username: user.username,
+            username: user.displayName,
             uid: user.uid,
             accessToken: user.accessToken,
           });

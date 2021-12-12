@@ -12,8 +12,7 @@ function AddPostForm({ userInformation }) {
     const imgSrc = `https://www.seekpng.com/png/detail/976-9765556_blue-feather-clip-art.png`;
     const imgAlt = "Feather";
     const uid = userInformation.uid;
-    const username = userInformation.displayName;
-    console.log(username);
+    const username = userInformation.username;
 
     const url = `${baseUrl}/create?imgSrc=${imgSrc}&imgAlt=${imgAlt}&message=${message}&uid=${uid}&username=${username}`;
 
@@ -31,7 +30,7 @@ function AddPostForm({ userInformation }) {
   return (
     <div className="AddPostForm">
       <form onSubmit={(e) => submitPost(e)}>
-        <label htmlFor="postMessage">Message</label>
+        <label htmlFor="postMessage">New Post</label>
         <input
           type="text"
           name="postMessage"

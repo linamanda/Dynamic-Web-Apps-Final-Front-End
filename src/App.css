@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Readex+Pro&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -139,6 +141,7 @@ body {
 
 /* PostCard.js styles */
 .PostCard {
+  background-color: #b5caff;
   border: black solid 2px;
   border-radius: 10px;
   cursor: pointer;
@@ -149,6 +152,10 @@ body {
   grid-template-columns: 65px repeat(4, 1fr);
   margin: 1% 20%;
   padding: 1% 2%;
+}
+
+.PostCard:hover {
+  background-color: #8fb4ff;
 }
 
 .PostCardProfileImage {
@@ -163,6 +170,8 @@ body {
 }
 
 .PostCardUserInfo {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 1em;
   grid-area: userInfo;
 }
 
@@ -176,7 +185,10 @@ body {
 }
 
 .PostCardMessage {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1em;
   grid-area: msg;
+  margin: 1% 5% 1% 5%;
 }
 
 /* Profile.js styles */
@@ -203,14 +215,22 @@ body {
 /* Post.js styles */
 .SinglePost {
   margin-top: 10%;
+  pointer-events: none;
+}
+
+.SinglePost > .PostCard > .PostCardMessage {
+  font-size: 3em;
 }
 
 /* AppPostForm.js styles */
 .AddPostForm {
-  border: black solid 2px;
+  background-color: #619bff;
+  border: midnightblue solid 3px;
   border-radius: 5px;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 2.5em;
   padding: 1% 2%;
-  margin: 1% 20%;
+  margin: 1% 20% 3% 20%;
 }
 .AddPostForm form {
   display: flex;
@@ -218,6 +238,7 @@ body {
 }
 
 .AddPostForm label {
+  color: white;
   padding: 0 0 10px 0;
 }
 
@@ -233,8 +254,10 @@ body {
   border: #03375e solid 1px;
   border-radius: 5px;
   color: white;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 0.4em;
   margin: 0 45%;
-  padding: 0.5em 0;
+  padding: 0.3em 0;
 }
 
 .AddPostForm button:hover {

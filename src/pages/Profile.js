@@ -6,7 +6,6 @@ import { baseUrl } from "../App";
 
 function Profile({ userInformation }) {
   const [userPosts, setUserPosts] = useState();
-
   useEffect(() => {
     // Get all posts from API
     axios
@@ -30,7 +29,6 @@ function Profile({ userInformation }) {
         />
         <h1>{userInformation.displayName}</h1>
       </div>
-
       <div className="ProfileUserPosts">
         <h2>Posts</h2>
         {userPosts &&

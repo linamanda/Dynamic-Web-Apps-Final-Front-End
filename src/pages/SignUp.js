@@ -22,14 +22,14 @@ function SignUp({ setLoggedIn, setUserInformation }) {
           // Signed in
           const user = userCredential.user;
 
-          updateProfile(user, {
+          updateProfile(auth.currentUser, {
             displayName: username,
           }).then(function () {
             // Update successful
             setLoggedIn(true);
             setUserInformation({
               email: user.email,
-              displayName: user.username,
+              username: user.displayName,
               uid: user.uid,
               accessToken: user.accessToken,
             });
