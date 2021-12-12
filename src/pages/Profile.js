@@ -5,6 +5,7 @@ import PostCard from "../components/PostCard";
 import { baseUrl } from "../App";
 
 function Profile({ userInformation }) {
+  console.log(userInformation);
   const [userPosts, setUserPosts] = useState();
   useEffect(() => {
     // Get all posts from API

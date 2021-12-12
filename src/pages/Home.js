@@ -6,6 +6,7 @@ import AddPostForm from "../components/AddPostForm";
 import { baseUrl } from "../App";
 
 function Home({ userInformation }) {
+  console.log(userInformation);
   const [posts, setPosts] = useState();
   useEffect(() => {
     // Get all posts from API
