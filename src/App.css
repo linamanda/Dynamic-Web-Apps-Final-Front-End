@@ -144,7 +144,7 @@ body {
   cursor: pointer;
   display: grid;
   grid-template-areas:
-    "pfp userInfo . . ."
+    "pfp userInfo userInfo userinfo userinfo"
     "msg msg msg msg msg";
   grid-template-columns: 65px repeat(4, 1fr);
   margin: 1% 20%;
@@ -190,4 +190,9 @@ body {
 
 .ProfileUserPosts h2 {
   margin: 2% 20%;
+}
+
+/* Post.js styles */
+.SinglePost {
+  margin-top: 10%;
 }

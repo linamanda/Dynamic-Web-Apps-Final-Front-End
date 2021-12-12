@@ -30,9 +30,6 @@ function App() {
   const [userInformation, setUserInformation] = useState({});
   const [appInitialized, setAppInitialized] = useState(false);
 
-  // Error
-  const [errors, setErrors] = useState();
-
   // Ensure app is initialized when it is ready to be
   useEffect(() => {
     // Initialize Firebase
@@ -68,11 +65,9 @@ function App() {
       .then(() => {
         setUserInformation({});
         setLoggedIn(false);
-        setErrors();
       })
       .catch((error) => {
         console.warn(error);
-        setErrors(error);
       });
   }
 
@@ -102,7 +97,6 @@ function App() {
             element={
               !loggedIn ? (
                 <Login
-                  setErrors={setErrors}
                   setLoggedIn={setLoggedIn}
                   setUserInformation={setUserInformation}
                 />
@@ -130,7 +124,6 @@ function App() {
             element={
               !loggedIn ? (
                 <SignUp
-                  setErrors={setErrors}
                   setLoggedIn={setLoggedIn}
                   setUserInformation={setUserInformation}
                 />

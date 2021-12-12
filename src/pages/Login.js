@@ -3,7 +3,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 // Components
 import LoginForm from "../components/LoginForm";
 
-function Login({ setErrors, setLoggedIn, setUserInformation }) {
+function Login({ setLoggedIn, setUserInformation }) {
   const loginUser = useCallback(
     (e) => {
       e.preventDefault();
@@ -23,16 +23,14 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
             uid: user.uid,
             accessToken: user.accessToken,
           });
-          setErrors();
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.warn({ error, errorCode, errorMessage });
-          setErrors(errorMessage);
         });
     },
-    [setErrors, setLoggedIn, setUserInformation]
+    [setLoggedIn, setUserInformation]
   );
 
   return (

@@ -5,6 +5,8 @@ function viewPost(postId) {
 }
 
 function PostCard({ post }) {
+  console.log(post);
+  const dateTime = new Date(post.timestamp).toLocaleString();
   return (
     <div className="PostCard" onClick={() => viewPost(post.pid)}>
       <div className="PostCardProfileImage">
@@ -12,7 +14,7 @@ function PostCard({ post }) {
       </div>
       <div className="PostCardUserInfo">
         <a href={`/user/${post.uid}`}>{post.username}</a>
-        <p>{post.datetime}</p>
+        <p>{dateTime}</p>
       </div>
       <div className="PostCardMessage">
         <p>{post.message}</p>

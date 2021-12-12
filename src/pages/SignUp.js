@@ -7,7 +7,7 @@ import {
 // Components
 import CreateUserForm from "../components/CreateUserForm";
 
-function SignUp({ setErrors, setLoggedIn, setUserInformation }) {
+function SignUp({ setLoggedIn, setUserInformation }) {
   const signUpUser = useCallback(
     (e) => {
       e.preventDefault();
@@ -34,16 +34,14 @@ function SignUp({ setErrors, setLoggedIn, setUserInformation }) {
               accessToken: user.accessToken,
             });
           });
-          setErrors();
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.warn({ error, errorCode, errorMessage });
-          setErrors(errorMessage);
         });
     },
-    [setErrors, setLoggedIn, setUserInformation]
+    [setLoggedIn, setUserInformation]
   );
 
   return (
