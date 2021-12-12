@@ -14,7 +14,7 @@ function AddPostForm({ userInformation }) {
     const uid = userInformation.uid;
     const username = userInformation.displayName;
 
-    const url = `${baseUrl}create?imgSrc=${imgSrc}&imgAlt=${imgAlt}&message=${message}&uid=${uid}&username=${username}`;
+    const url = `${baseUrl}/create?imgSrc=${imgSrc}&imgAlt=${imgAlt}&message=${message}&uid=${uid}&username=${username}`;
 
     axios
       .get(url)

@@ -12,7 +12,7 @@ function Post() {
   useEffect(() => {
     // Get a single post from API
     axios
-      .get(`${baseUrl}post/${id}`)
+      .get(`${baseUrl}/post/${id}`)
       .then(function (response) {
         // successful request --- set post
         setPost(response.data);

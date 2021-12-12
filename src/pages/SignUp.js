@@ -29,7 +29,7 @@ function SignUp({ setLoggedIn, setUserInformation }) {
             setLoggedIn(true);
             setUserInformation({
               email: user.email,
-              username: user.username,
+              displayName: user.username,
               uid: user.uid,
               accessToken: user.accessToken,
             });
