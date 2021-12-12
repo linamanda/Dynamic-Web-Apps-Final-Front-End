@@ -10,7 +10,7 @@ function Profile({ userInformation }) {
   useEffect(() => {
     // Get all posts from API
     axios
-      .get(`${baseUrl}user/${userInformation.uid}`)
+      .get(`${baseUrl}/user/${userInformation.uid}`)
       .then(function (response) {
         // successful request --- set posts
         setUserPosts(response.data);

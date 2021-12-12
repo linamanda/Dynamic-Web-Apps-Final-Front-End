@@ -20,7 +20,7 @@ import Profile from "./pages/Profile.js";
 import SignUp from "./pages/SignUp.js";
 
 export const baseUrl =
-  process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
+  `https://cryptic-wave-10365.herokuapp.com` || `http://localhost:4000`;
 
 function App() {
   // Track if user is logged in
