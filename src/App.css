@@ -204,3 +204,40 @@ body {
 .SinglePost {
   margin-top: 10%;
 }
+
+/* AppPostForm.js styles */
+.AddPostForm {
+  border: black solid 2px;
+  border-radius: 5px;
+  padding: 1% 2%;
+  margin: 1% 20%;
+}
+.AddPostForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.AddPostForm label {
+  padding: 0 0 10px 0;
+}
+
+.AddPostForm input {
+  border: black solid 1px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+}
+
+.AddPostForm button {
+  background-color: #1e6ed4;
+  border: #03375e solid 1px;
+  border-radius: 5px;
+  color: white;
+  margin: 0 45%;
+  padding: 0.5em 0;
+}
+
+.AddPostForm button:hover {
+  cursor: pointer;
+  background-color: midnightblue;
+}

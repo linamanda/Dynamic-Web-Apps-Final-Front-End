@@ -13,6 +13,7 @@ function AddPostForm({ userInformation }) {
     const imgAlt = "Feather";
     const uid = userInformation.uid;
     const username = userInformation.displayName;
+    console.log(username);
 
     const url = `${baseUrl}/create?imgSrc=${imgSrc}&imgAlt=${imgAlt}&message=${message}&uid=${uid}&username=${username}`;
 
