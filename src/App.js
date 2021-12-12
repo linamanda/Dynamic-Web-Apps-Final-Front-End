@@ -19,6 +19,9 @@ import Post from "./pages/Post.js";
 import Profile from "./pages/Profile.js";
 import SignUp from "./pages/SignUp.js";
 
+export const baseUrl =
+  process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
+
 function App() {
   // Track if user is logged in
   const [loggedIn, setLoggedIn] = useState(false);

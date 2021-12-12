@@ -1,7 +1,6 @@
 import React from "react";
 // Components
 import PostCard from "../components/PostCard";
-import { MOCK_POST } from "./Home";
 
 function Profile({ userInformation }) {
   console.log({ userInformation });
@@ -14,7 +13,7 @@ function Profile({ userInformation }) {
 
       <div className="ProfileUserPosts">
         <h2>Posts</h2>
-        <PostCard post={MOCK_POST} />
+        {/* <PostCard post={MOCK_POST} /> */}
       </div>
     </div>
   );

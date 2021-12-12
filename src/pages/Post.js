@@ -3,17 +3,16 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 // Components
 import PostCard from "../components/PostCard";
-
-const url = `http://localhost:4000`;
+import { baseUrl } from "../App";
 
 function Post() {
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState();
   let { id } = useParams();
 
   useEffect(() => {
     // Get a single post from API
     axios
-      .get(`${url}/post/${id}`)
+      .get(`${baseUrl}post/${id}`)
       .then(function (response) {
         // successful request --- set post
         setPost(response.data);
@@ -26,7 +25,7 @@ function Post() {
 
   return (
     <div className="PageWrapper SinglePost">
-      <PostCard post={post} />
+      {post && <PostCard post={post} />}
     </div>
   );
 }

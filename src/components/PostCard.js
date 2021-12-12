@@ -5,8 +5,7 @@ function viewPost(postId) {
 }
 
 function PostCard({ post }) {
-  console.log(post);
-  const dateTime = new Date(post.timestamp).toLocaleString();
+  const dateTime = new Date(post.timestamp.seconds * 1000).toLocaleString();
   return (
     <div className="PostCard" onClick={() => viewPost(post.pid)}>
       <div className="PostCardProfileImage">

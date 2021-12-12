@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-const baseUrl = `http://localhost:4000`;
+import { baseUrl } from "../App";
 
 function AddPostForm({ userInformation }) {
   const navigate = useNavigate();
@@ -15,12 +14,11 @@ function AddPostForm({ userInformation }) {
     const uid = userInformation.uid;
     const username = userInformation.displayName;
 
-    const url = `${baseUrl}/create?message=${message}&imgSrc=${imgSrc}&imgAlt=${imgAlt}&uid=${uid}&username=${username}`;
+    const url = `${baseUrl}create?imgSrc=${imgSrc}&imgAlt=${imgAlt}&message=${message}&uid=${uid}&username=${username}`;
 
     axios
       .get(url)
       .then(function (response) {
-        console.log({ response });
         navigate("/", { replace: true });
       })
       .catch(function (error) {
