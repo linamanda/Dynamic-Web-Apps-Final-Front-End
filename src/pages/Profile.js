@@ -19,7 +19,7 @@ function Profile({ userInformation }) {
         // handle error
         console.warn(error);
       });
-  }, []);
+  }, [userInformation.uid]);
 
   return (
     <div className="PageWrapper">
