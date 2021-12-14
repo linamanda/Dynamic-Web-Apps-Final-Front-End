@@ -12,7 +12,7 @@ function PostCard({ post }) {
         <img src={post.imgSrc} alt={post.imgAlt} />
       </div>
       <div className="PostCardUserInfo">
-        <a href={`/user/${post.uid}`}>{post.username}</a>
+        <p>{post.username}</p>
         <p>{dateTime}</p>
       </div>
       <div className="PostCardMessage">
