@@ -34,6 +34,7 @@ function AddPostForm({ userInformation }) {
         <input
           type="text"
           name="postMessage"
+          maxLength="100"
           placeholder="Enter message here..."
         />
         <button type="submit">Post</button>

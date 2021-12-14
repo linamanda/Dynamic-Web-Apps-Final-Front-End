@@ -57,6 +57,10 @@ body {
   text-decoration: none;
 }
 
+.Header nav a.Active {
+  border-bottom: white solid 2px;
+}
+
 .Header nav a:hover {
   border-bottom: white solid 2px;
 }
